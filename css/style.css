@@ -2,11 +2,12 @@
 FF3B18 (naranja) 
 596787 (azul)*/
 
-.bg-black {
+body {
     background-color: black;
 }
 
-body {
+/* General */
+.bg-black {
     background-color: black;
 }
 
@@ -15,6 +16,7 @@ body {
     font-size: 1.2rem;
     margin-left: 5px;
     margin-right: 5px;
+    text-decoration: none;
 }
 
 .follow-link:hover {
@@ -26,18 +28,27 @@ body {
     color: #FF3B18;
 }
 
-.box-orage {
-    border-radius: 15px;
-    color: white;
-    background-color: #FF3B18;
-    padding: 10px;
-    width: auto;
+.date-box {
+    border-radius: 10px;
+    width: 100%;
+    color: black;
+    background-color:    white;
     display: inline-block;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
 }
 
-.btn-yellow {
+.date-box p {
+    font-size: 1.2rem;
+    color: #757575;
+    line-height: 2;
+}
+
+.btn-buy {
     display: inline-block;
-    background-color: #E18D17; /* Color naranja */
+    background-color: #FF3B18; /* Color naranja */
     color: white; /* Texto blanco */
     text-align: center;
     text-decoration: none;
@@ -45,82 +56,114 @@ body {
     border-radius: 50px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
 }
 
-.btn-yellow:hover {
+.btn-buy:hover {
     background-color: white; /* Color más oscuro para el hover */
     transform: scale(1.05);
-    color: #E18D17;
+    color: #FF3B18;
 }
 
-.btn-yellow:active {
-    transform: scale(0.98);
+.btn-buy:active {
+        transform: scale(0.98);
 }
 
-.staatliches-regular {
-    font-family: "Staatliches", serif;
-    font-weight: 400;
-    font-style: normal;
+.main {
+    height: 100vh;
+    background-image: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+    
+.view-video {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    max-width: 300px;
+    display: flex;
 }
 
-.chakra-petch-light {
-    font-family: "Chakra Petch", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .chakra-petch-regular {
-    font-family: "Chakra Petch", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .chakra-petch-medium {
-    font-family: "Chakra Petch", serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .chakra-petch-semibold {
-    font-family: "Chakra Petch", serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .chakra-petch-bold {
-    font-family: "Chakra Petch", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .chakra-petch-light-italic {
-    font-family: "Chakra Petch", serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .chakra-petch-regular-italic {
-    font-family: "Chakra Petch", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .chakra-petch-medium-italic {
-    font-family: "Chakra Petch", serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .chakra-petch-semibold-italic {
-    font-family: "Chakra Petch", serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .chakra-petch-bold-italic {
-    font-family: "Chakra Petch", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  
+.logo-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    max-width: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+/* Galery */
+
+.galery {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    max-width: 300px;
+}
+
+.img-card {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    filter: grayscale(1) opacity(.8);
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.img-card:hover {
+    filter: grayscale(0) opacity(1);
+}
+
+.img-card::before,
+.img-card::after {
+    transform: scaleY(-1);
+}
+
+/*reflection*/
+.img-card:hover::after {
+    content: '';
+    background-image: inherit;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    width: inherit;
+    height: 10%;
+    position: absolute;
+    bottom: -15%;
+}
+
+/*fade reflection*/
+.img-card:hover::before {
+    content: '';
+    width: inherit;
+    height: 12%;
+    position: absolute;
+    bottom: -15%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .9),rgba(255, 255, 255, .5));
+    z-index: 1;
+}
+
+.img1 {
+    background-image: url('../img/07_foto_1.jpg');
+}
+
+.img2 {
+    background-image: url('../img/07_foto_2.jpg');
+}
+
+.img3 {
+    background-image: url('../img/07_foto_3.jpg');
+}
+
+.img4 {
+    background-image: url('../img/07_foto_4.jpg');
+}
