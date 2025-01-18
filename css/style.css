@@ -1,5 +1,5 @@
 /*E18D17 (amarillo) 
-FF3B18 (naranja) 
+FAC200 (naranja) 
 596787 (azul)*/
 
 body {
@@ -21,23 +21,24 @@ body {
 
 .follow-link:hover {
     text-decoration: none;
-    color: #FF3B18;
+    color: #FAC200;
 }
 
 .text-orange {
-    color: #FF3B18;
+    color: #FAC200;
 }
 
 .date-box {
     border-radius: 10px;
     width: 100%;
     color: black;
-    background-color:    white;
+    background-color: white;
     display: inline-block;
     line-height: 1;
     margin: 0;
     margin-bottom: 5px;
     font-size: 1.5rem;
+    opacity: 0.5;
 }
 
 .date-box p {
@@ -48,7 +49,7 @@ body {
 
 .btn-buy {
     display: inline-block;
-    background-color: #FF3B18; /* Color naranja */
+    background-color: #FAC200; /* Color naranja */
     color: white; /* Texto blanco */
     text-align: center;
     text-decoration: none;
@@ -62,7 +63,7 @@ body {
 .btn-buy:hover {
     background-color: white; /* Color más oscuro para el hover */
     transform: scale(1.05);
-    color: #FF3B18;
+    color: #FAC200;
 }
 
 .btn-buy:active {
@@ -80,43 +81,43 @@ body {
     
 .view-video {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
+    bottom: 20px;
+    left: 20px;
     max-width: 300px;
     display: flex;
 }
 
 .logo-container {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 50px;
+    left: 20px;
     max-width: 270px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: flex-end;*/
+    /*flex-wrap: wrap;*/
 }
 
 /* Galery */
 
 .galery {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
     max-width: 300px;
 }
 
 .img-card {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
     transition: all 200ms ease-in;
     filter: grayscale(1) opacity(.8);
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .img-card:hover {
@@ -153,17 +154,13 @@ body {
 }
 
 .img1 {
-    background-image: url('../img/07_foto_1.jpg');
+    background-image: url('../img/07_foto_5.jpg');
 }
 
 .img2 {
-    background-image: url('../img/07_foto_2.jpg');
+    background-image: url('../img/07_foto_6.jpg');
 }
 
 .img3 {
-    background-image: url('../img/07_foto_3.jpg');
-}
-
-.img4 {
-    background-image: url('../img/07_foto_4.jpg');
+    background-image: url('../img/07_foto_7.jpg');
 }
