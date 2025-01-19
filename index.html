@@ -14,12 +14,15 @@
     <title>LEGADO</title>
 </head>
 <body class="main">
-    <section class="container-fluid">
+    <section class="container-fluid firstScreen">
         <div class="text-center">
             <div class="row justify-content-between">
                 <div class="col-3"></div>
 
-                <div class="col-5 mb-5" style="margin-top: 100px;">
+                <div class="col-5 mb-5" style="margin-top: 50px;">
+
+                    <button type="button" class="btn btn-explore chakra-petch-regular my-3" onclick="showGrafica()">Explora Legado</button>
+
                     <h1 class="text-white staatliches-regular">LEGADO ALLSTAR PRESENTA</h2>
                     <h2 class="text-white chakra-petch-regular">PREVENTA EXCLUSIVA DEL 15 AL 31 DE ENERO</h1>
                     <div>
@@ -86,7 +89,7 @@
         
     </section>
 
-    <div class="galery">
+    <div class="galery firstScreen">
 
         <div class="images-selector">
             <label for="duck" class="img-card img1"></label>
@@ -97,11 +100,11 @@
         <a href="" class="follow-link chakra-petch-bold"><i class="fa-solid fa-camera"></i>&nbsp;GALERÍA DE FOTOS</a>
     </div>
 
-    <div class="view-video">
+    <div class="view-video firstScreen">
         <a href="" class="follow-link chakra-petch-bold"><i class="fa-solid fa-play"></i>&nbsp;SEGUIR VIENDO</a>
     </div>
 
-    <div class="logo-container">
+    <div class="logo-container firstScreen">
         
         <div class="p-0" style="width: 130px;">
             <img src="img/festival.png" alt="LEGADO" class="w-100">
@@ -128,9 +131,33 @@
             </div>
         </div>
     </div>
+
+    <div id="p_grafica" class="video-background">
+        <video autoplay muted loop class="w-100">
+            <source src="img/GRAFICAS.mov" type="video/quicktime">
+            
+            <source src="img/graficas.mp4" type="video/mp4">
+
+        </video>
+
+        <button type="button" class="video-close chakra-petch-bold" onclick="showFirstScreen()"><i class="fa-solid fa-square-caret-left"></i>&nbsp;Volver</button>
+    </div>
     
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="fontawesome/js/all.min.js"></script>
+
+    <script>
+        function showGrafica(){
+            $('.firstScreen').css('display','none');
+            $('#p_grafica').css('display','block');
+        }
+
+        function showFirstScreen(){
+            $('.firstScreen').css('display','block');
+            $('#p_grafica').css('display','none');
+        }
+    </script>
 </body>
 </html>
