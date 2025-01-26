@@ -1,6 +1,9 @@
-/*E18D17 (amarillo) 
-FAC200 (naranja) 
-596787 (azul)*/
+:root {
+    --naranja: #F3981E;
+    --amarillo: #FBCC0E;
+    --gris: #454546;
+    --gris-claro: #79797A;
+}
 
 body {
     background-color: black;
@@ -21,11 +24,11 @@ body {
 
 .follow-link:hover {
     text-decoration: none;
-    color: #FAC200;
+    color: var(--amarillo);
 }
 
 .text-orange {
-    color: #FAC200;
+    color: var(--amarillo);
 }
 
 .date-box {
@@ -43,7 +46,7 @@ body {
 
 .date-box p {
     font-size: 1.2rem;
-    color: #757575;
+    color: var(--gris-claro);
     line-height: 2;
 }
 
@@ -51,7 +54,7 @@ body {
 
 .btn-buy {
     display: inline-block;
-    background-color: #FAC200; /* Color naranja */
+    background-color: var(--amarillo); /* Color naranja */
     color: white; /* Texto blanco */
     text-align: center;
     text-decoration: none;
@@ -65,7 +68,7 @@ body {
 .btn-buy:hover {
     background-color: white; /* Color más oscuro para el hover */
     transform: scale(1.05);
-    color: #FAC200;
+    color: var(--amarillo);
 }
 
 .btn-buy:active {
@@ -73,18 +76,18 @@ body {
 }
 
 .btn-explore {
-    color: #757575;
+    color: var(--gris-claro);
     background: none;
     border-radius: 5px;
     padding: 0.4rem 0.6rem;
-    border: 2px solid #757575;
+    border: 2px solid var(--gris-claro);
     cursor: pointer;
     transition: background-color 0.7s ease;
 }
 
 .btn-explore:hover {
     color: white;
-    background-color: #757575;
+    background-color: var(--gris-claro);
     box-shadow: 2px 2px 6px 1px #3E4144;
     opacity: 0.3;
 }
@@ -95,11 +98,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 }
     
 .view-video {
-    position: fixed;
     bottom: 20px;
     left: 20px;
     max-width: 300px;
@@ -107,23 +108,19 @@ body {
 }
 
 .logo-container {
-    position: fixed;
-    top: 50px;
-    left: 20px;
-    max-width: 270px;
-    /*display: flex;*/
-    /*justify-content: space-between;*/
-    /*align-items: flex-end;*/
-    /*flex-wrap: wrap;*/
+    background-image: url('../img/07_bg-logos.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* Galery */
 
 .galery {
-    position: fixed;
     bottom: 20px;
     right: 20px;
     max-width: 300px;
+    text-align: center;
 }
 
 .img-card {
@@ -206,5 +203,35 @@ body {
 }
 
 .video-close:hover {
-    color: #FAC200;
+    color: var(--amarillo);
+}
+
+
+/* Banner */
+
+.banner {
+    background-image: url('../img/BACKGROUND TEXTURA.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* SPOTYFY */
+
+.spoty {
+    background-image: url('../img/bg-spoty.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+/* text */
+
+.txt-s {
+    font-size: 1.2rem;
+}
+
+.txt-m {
+    font-size: 1.5rem;
+    line-height: 1;
 }
