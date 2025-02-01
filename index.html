@@ -17,7 +17,7 @@
     <section id="p_main" class="container-fluid" style="display: none;">
         <div class="video-background-main">
             <video class="bg-video" autoplay loop muted playsinline>
-                <source src="img/GRAFICAS.mov" type="video/mp4">
+                <source src="img/bg-video.mov" type="video/mp4">
                 Tu navegador no soporta videos en HTML5.
             </video>
 
@@ -132,9 +132,23 @@
     </section>
 
     <section id="p_grafica" class="video-background-grafica">
-        <video class="bg-video" autoplay muted loop class="w-100">
-            <source src="img/GRAFICAS.mov" type="video/mp4">
+        <video class="bg-video d-none d-lg-block" autoplay muted loop class="w-100">
+            <source src="img/GRAFICAS.mov" type="video/mp4">           
         </video>
+
+        <div class="row d-lg-none">
+            <div class="col-12">
+                <video class="w-100" autoplay muted loop class="w-100">
+                    <source src="img/bg-video.mov" type="video/mp4">           
+                </video>
+                <video class="w-100" autoplay muted loop class="w-100">
+                    <source src="img/GRAFICAS.mov" type="video/mp4">           
+                </video>
+                <video class="w-100" autoplay muted loop class="w-100">
+                    <source src="img/bg-video.mov" type="video/mp4">           
+                </video>
+            </div>
+        </div>
 
         <button type="button" class="btn btn-explore video-close chakra-petch-regular my-3" onclick="showFirstScreen()">Explora Legado</button>
     </section>

@@ -220,6 +220,12 @@ body {
     z-index: -1;
 }
 
+.video-background-grafica .bg-video-movil {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
 /* Banner */
 
 .banner {
@@ -300,8 +306,11 @@ body {
 
     .btn-explore {
         padding: 0.4rem 0.6rem;
-        border: 4px solid var(--gris-claro);
-        font-size: 1.6rem;
+        border: 3px solid var(--gris);
+        font-size: 1.4rem;
+        background-color: var(--gris-claro);
+        color: var(--amarillo);
+        opacity: 0.8;
     }
 
     .galery {
