@@ -14,7 +14,7 @@
     <title>LEGADO</title>
 </head>
 <body>
-    <section class="container-fluid">
+    <section id="p_main" class="container-fluid" style="display: none;">
         <div class="video-background-main">
             <video class="bg-video" autoplay loop muted playsinline>
                 <source src="img/bg-video.mov" type="video/mp4">
@@ -23,7 +23,7 @@
 
             <div class="row justify-content-between align-items-end p-5">
                 <div class="col-4">
-                    <video id="p_video_promo" autoplay loop controls class="w-100">
+                    <video id="p_video_promo" autoplay loop class="w-100">
                         <source src="img/video-promo.mov" type="video/mp4">
                         Tu navegador no soporta videos en HTML5.
                     </video>
@@ -68,79 +68,77 @@
                 </div>
             </div>
         </div>
+    
+
+        <div class="banner row justify-content-between align-items-center my-4">
+            <div class="col-6">
+                <img src="img/hombre.png" class="w-100" alt="hombre">
+            </div>
+            <div class="col-6 p-5">
+                <h2 class="text-white staatliches-regular display-4">Sobre Conway The Machine</h2>
+
+                <p class="text-white chakra-petch-regular txt-m">
+                    Conway The Machine, desde Buffalo, Nueva York, es un referente del rap underground y 
+                    cofundador del legendario sello Griselda Records junto a su hermano Westside Gunn. 
+                    Con un estilo crudo y letras pesadas que respiran la esencia de los ‘90, se ganó el 
+                    respeto de la escena con discos como "From King to a God" y "God Don't Make Mistakes". 
+                    Ha reventado escenarios de Nueva York, Londres, Los Ángeles, Ámsterdam, Milán y Berlín. 
+                    Ahora toca en Buenos Aires POR PRIMERA VEZ, en un show íntimo que no podés dejar pasar.
+                </p>
+            </div>
+        </div>
+
+        <div class="spoty row justify-content-between align-items-center p-5 my-4">
+            <div class="col-4">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4pAFbjAwIsJQBjCNfjKLpg?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
+            </div>
+            <div class="col-4 text-center">
+                <div class="m-auto text-center" style="width: 200px;">
+                    <img src="img/festival.png" class="w-100" alt="logo-festival">
+                </div>
+
+                <p class="text-white chakra-petch-regular txt-s">
+                    Esto es más que un show, es historia. Conway The Machine pisa suelo porteño con su tour mundial, y se suma la presencia letal de Lil Supa y N-Wise Allah, que presentarán el EP WIZ en una performance brutal JAMÁS ANTES VISTA.
+                </p>
+            </div>
+            <div class="col-4">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/67gqUXxHedeUGDTxwBzdjS?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
+            </div>
+        </div>
+
+        <div class="logo-container row p-5 justify-content-center align-items-end">
+            <div class="p-0" style="width: 170px;">
+                <img src="img/base.png" alt="Base Estudio" class="w-100" style="margin-bottom: 90px">
+                <div class="d-block text-center">
+                    <a href="https://www.instagram.com/bacestudio/" target="_blank" class="follow-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@Bacestudio" target="_blank" class="follow-link"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="p-0" style="width: 300px;">
+                <img src="img/logo-blanco.png" alt="LEGADO" class="w-100">
+                <div class="d-block text-center">
+                    <a href="https://www.instagram.com/legado_latino_/" target="_blank" class="follow-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@legado_latino" target="_blank" class="follow-link"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        
+            <div class="p-0" style="width: 200px">
+                <img src="img/sh-blanco.png" alt="thesurfhouse" class="w-100">
+                <div class="d-block text-center">
+                    <a href="https://thesurfhouse.com.ar/" target="_blank" class="follow-link"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div id="p_grafica" class="video-background">
-        <video autoplay muted loop class="w-100">
-            <source src="img/GRAFICAS.mov" type="video/quicktime">
-            
-            <source src="img/graficas.mp4" type="video/mp4">
-
+    <section id="p_grafica" class="video-background-main">
+        <video class="bg-video" autoplay muted loop class="w-100">
+            <source src="img/GRAFICAS.mov" type="video/mp4">
         </video>
 
-        <button type="button" class="video-close chakra-petch-bold" onclick="showFirstScreen()"><i class="fa-solid fa-square-caret-left"></i>&nbsp;Volver</button>
-    </div>
-
-    <div class="banner row justify-content-between align-items-center my-4">
-        <div class="col-6">
-            <img src="img/hombre.png" class="w-100" alt="hombre">
-        </div>
-        <div class="col-6 p-5">
-            <h2 class="text-white staatliches-regular display-4">Sobre Conway The Machine</h2>
-
-            <p class="text-white chakra-petch-regular txt-m">
-                Conway The Machine, desde Buffalo, Nueva York, es un referente del rap underground y 
-                cofundador del legendario sello Griselda Records junto a su hermano Westside Gunn. 
-                Con un estilo crudo y letras pesadas que respiran la esencia de los ‘90, se ganó el 
-                respeto de la escena con discos como "From King to a God" y "God Don't Make Mistakes". 
-                Ha reventado escenarios de Nueva York, Londres, Los Ángeles, Ámsterdam, Milán y Berlín. 
-                Ahora toca en Buenos Aires POR PRIMERA VEZ, en un show íntimo que no podés dejar pasar.
-            </p>
-        </div>
-    </div>
-
-    <div class="spoty row justify-content-between align-items-center p-5 my-4">
-        <div class="col-4">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4pAFbjAwIsJQBjCNfjKLpg?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
-        </div>
-        <div class="col-4 text-center">
-            <div class="m-auto text-center" style="width: 200px;">
-                <img src="img/festival.png" class="w-100" alt="logo-festival">
-            </div>
-
-            <p class="text-white chakra-petch-regular txt-s">
-                Esto es más que un show, es historia. Conway The Machine pisa suelo porteño con su tour mundial, y se suma la presencia letal de Lil Supa y N-Wise Allah, que presentarán el EP WIZ en una performance brutal JAMÁS ANTES VISTA.
-            </p>
-        </div>
-        <div class="col-4">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/67gqUXxHedeUGDTxwBzdjS?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
-        </div>
-    </div>
-
-    <div class="logo-container row p-5 justify-content-center align-items-end">
-        <div class="p-0" style="width: 130px;">
-            <img src="img/base.jpg" alt="Base Estudio" class="w-100">
-            <div class="d-block text-center">
-                <a href="https://www.instagram.com/bacestudio/" target="_blank" class="follow-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@Bacestudio" target="_blank" class="follow-link"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-
-        <div class="p-0" style="width: 300px;">
-            <img src="img/logo-blanco.png" alt="LEGADO" class="w-100">
-            <div class="d-block text-center">
-                <a href="https://www.instagram.com/legado_latino_/" target="_blank" class="follow-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@legado_latino" target="_blank" class="follow-link"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-    
-        <div class="p-0" style="width: 200px">
-            <img src="img/sh-blanco.png" alt="thesurfhouse" class="w-100">
-            <div class="d-block text-center">
-                <a href="https://thesurfhouse.com.ar/" target="_blank" class="follow-link"><i class="fa-solid fa-link"></i></a>
-            </div>
-        </div>
-    </div>
+        <button type="button" class="btn btn-explore video-close chakra-petch-regular my-3" onclick="showFirstScreen()">Explora Legado</button>
+    </section>
     
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -150,17 +148,13 @@
     <script>
 
         $( document ).ready(function() {
-            const video = $("#p_video_promo")[0].play();
+            //
         });
 
-        function showGrafica(){
-            $('.firstScreen').css('display','none');
-            $('#p_grafica').css('display','block');
-        }
-
         function showFirstScreen(){
-            $('.firstScreen').css('display','block');
+            $('#p_main').css('display','block');
             $('#p_grafica').css('display','none');
+            const video = $("#p_video_promo")[0].play();
         }
     </script>
 </body>
