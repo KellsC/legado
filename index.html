@@ -17,7 +17,7 @@
     <section id="p_main" class="container-fluid" style="display: none;">
         <div class="video-background-main">
             <video class="bg-video" autoplay loop muted playsinline>
-                <source src="img/bg-video.mov" type="video/mp4">
+                <source src="img/GRAFICAS.mov" type="video/mp4">
                 Tu navegador no soporta videos en HTML5.
             </video>
 
@@ -42,7 +42,7 @@
                     </div>
                 </div>
     
-                <div class="col-12 col-lg-5 mb-4 order-2 order-lg-3">
+                <div class="col-12 col-lg-5 order-2 order-lg-3">
     
                     <div class="legado-ico m-auto">
                         <img src="img/all-star.png" class="w-100" alt="all-star">
@@ -69,8 +69,7 @@
             </div>
         </div>
     
-
-        <div class="banner row justify-content-between align-items-center my-4">
+        <div class="banner row justify-content-between align-items-center">
             <div class="col-12 col-lg-6">
                 <img src="img/hombre.png" class="w-100" alt="hombre">
             </div>
@@ -88,7 +87,7 @@
             </div>
         </div>
 
-        <div class="spoty row justify-content-between align-items-center p-3 p-lg-5 my-4 mx-0">
+        <div class="spoty row justify-content-between align-items-center p-3 p-lg-5 mx-0">
             <div class="col-12 col-lg-4 order-2 order-lg-1">
                 <iframe class="spoty-list" style="border-radius:12px" src="https://open.spotify.com/embed/album/4pAFbjAwIsJQBjCNfjKLpg?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
             </div>
@@ -154,7 +153,7 @@
         function showFirstScreen(){
             $('#p_main').css('display','block');
             $('#p_grafica').css('display','none');
-            //const video = $("#p_video_promo")[0].play();
+            const video = $("#p_video_promo")[0].play();
         }
     </script>
 </body>

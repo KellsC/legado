@@ -60,7 +60,7 @@ body {
 .btn-buy {
     display: inline-block;
     background-color: var(--amarillo); /* Color naranja */
-    color: white; /* Texto blanco */
+    color: black;
     text-align: center;
     text-decoration: none;
     padding: 10px 40px;
@@ -290,8 +290,18 @@ body {
         object-fit:contain
     }
 
+    .video-close {
+        bottom: 10%;
+    }
+
     .legado-ico {
         width: 300px
+    }
+
+    .btn-explore {
+        padding: 0.4rem 0.6rem;
+        border: 4px solid var(--gris-claro);
+        font-size: 1.6rem;
     }
 
     .galery {
@@ -309,18 +319,18 @@ body {
 
 @media (max-width: 576px) {
     .logo-container .legado {
-        width: 150px;
+        width: 120px;
     }
 
     .logo-container .house {
-        width: 100px;
+        width: 80px;
     }
 
     .logo-container .base {
-        width: 85px;
+        width: 68px;
     }
 
     .logo-container .base img {
-        margin-bottom: 45px;
+        margin-bottom: 36px;
     }
 }
