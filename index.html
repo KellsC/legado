@@ -14,7 +14,7 @@
     <title>LEGADO</title>
 </head>
 <body>
-    <section id="p_main" class="container-fluid p-0">
+    <section id="p_main" class="container-fluid p-0 w-100" style="display: none;">
         <div class="video-background-main">
             <video class="bg-video" autoplay loop muted playsinline>
                 <source src="img/bg-video.mov" type="video/mp4">
@@ -23,7 +23,7 @@
 
             <div class="row justify-content-between align-items-end p-3 p-lg-5">
                 <div class="col-12 col-lg-4 order-1">
-                    <video id="p_video_promo" autoplay loop controls class="w-100">
+                    <video id="p_video_promo" autoplay loop class="w-100">
                         <source src="img/video-promo.mov" type="video/mp4">
                         Tu navegador no soporta videos en HTML5.
                     </video>
@@ -38,7 +38,23 @@
                             <label for="cat" class="img-card img3"></label>
                         </div>
                 
-                        <a href="" class="follow-link chakra-petch-bold"><i class="fa-solid fa-camera"></i>&nbsp;GALERÍA DE FOTOS</a>
+                        <a href="" class="follow-link chakra-petch-bold d-none d-lg-inline"><i class="fa-solid fa-camera"></i>&nbsp;GALERÍA DE FOTOS</a>
+
+                        <div class="d-lg-none bg-black my-3">
+                            <a href="" class="follow-link chakra-petch-bold"><i class="fa-solid fa-camera"></i>&nbsp;GALERÍA DE FOTOS</a>
+                        </div>
+
+                        <div class="row box-img d-lg-none">
+                            <div class="col-4">
+                                <img class="w-100" src="img/07_foto_5.jpg" alt="">
+                            </div>      
+                            <div class="col-4">
+                                <img class="w-100" src="img/07_foto_6.jpg" alt="">
+                            </div> 
+                            <div class="col-4">
+                                <img class="w-100" src="img/07_foto_7.jpg" alt="">
+                            </div>                       
+                        </div>
                     </div>
                 </div>
     
@@ -69,7 +85,7 @@
             </div>
         </div>
     
-        <div id="Banner" class="banner row justify-content-between align-items-center">
+        <div id="Banner" class="banner row justify-content-between align-items-center m-0">
             <div class="col-12 col-lg-6">
                 <img src="img/hombre.png" class="w-100" alt="hombre">
             </div>
@@ -105,7 +121,7 @@
             </div>
         </div>
 
-        <div class="logo-container row p-3 p-lg-5 justify-content-center align-items-end">
+        <div class="logo-container row p-3 p-lg-5 justify-content-center align-items-end m-0">
             <div class="base p-0">
                 <img src="img/base.png" alt="Base Estudio" class="w-100">
                 <div class="d-block text-center">
@@ -131,7 +147,7 @@
         </div>
     </section>
 
-    <section id="p_grafica" class="video-background-grafica" style="display: none;">
+    <section id="p_grafica" class="video-background-grafica">
         <video class="bg-video d-none d-lg-block" autoplay muted loop class="w-100">
             <source src="img/GRAFICAS.mov" type="video/mp4">           
         </video>
@@ -145,12 +161,12 @@
                 <source src="img/GRAFICAS.mov" type="video/mp4">           
             </video>
             
-            <div class="col p-0 superior">
+            <div class="col p-0 inferior">
                 
             </div>
         </div>
 
-        <button type="button" class="btn btn-explore video-close chakra-petch-regular my-3" onclick="showFirstScreen()">Explora Legado</button>
+        <button type="button" class="btn btn-blanco video-close chakra-petch-regular my-3" onclick="showFirstScreen()">Explora<br>Legado</button>
     </section>
     
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -172,6 +188,9 @@
 
                     $("#p_video_promo")[0].pause();
 
+                }
+                else if ($(window).scrollTop() <= bannerOffsetTop) {
+                    $("#p_video_promo")[0].play();
                 }
 
             });
