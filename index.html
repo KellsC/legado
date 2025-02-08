@@ -9,12 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/galery.css">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <title>LEGADO</title>
 </head>
 <body>
-    <section id="p_main" class="container-fluid p-0 w-100">
+    <section id="p_main" class="container-fluid p-0 w-100" style="display: none;">
         <div class="video-background-main">
             <video class="bg-video" autoplay loop muted playsinline>
                 <source src="img/bg-video.mov" type="video/mp4">
@@ -168,6 +169,85 @@
 
         <button type="button" class="btn btn-blanco video-close chakra-petch-regular my-3" onclick="showFirstScreen()">Explora<br>Legado</button>
     </section>
+
+    <section id="p_galeria">
+        <div class="container">
+            <h1 class="display-1 text-center text-white staatliches-regular mt-5">GALERÍA</h1>
+            <div class="line"></div>
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase">Publico</h2>
+                    <img class="w-100 galery-img" src="img/07_foto_1.jpg" alt="">
+                </div>
+
+                <div class="col-3">
+                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase">Publico</h2>
+                    <img class="w-100 galery-img" src="img/07_foto_1.jpg" alt="" onclick="openGalery()">
+                </div>
+
+                <div class="col-3">
+                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase">Publico</h2>
+                    <img class="w-100 galery-img" src="img/07_foto_1.jpg" alt="">
+                </div>
+            </div>
+
+            <div id="p_publico" class="row justify-content-center" style="display: none;">
+                <div class="col-12">
+                    <h3 class="text-center chakra-petch-medium my-5 text-uppercase">publico</h3>
+                </div>
+                <div class="row col-9 justify-content-center">
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                    <button class="btn btn-link follow-link chakra-petch-bold d-none d-lg-inline" onclick="closeGalery()"><i class="fa-solid fa-square-caret-up"></i>&nbsp;CERRAR</button>
+                </div>
+
+                <div class="col-12">
+                    <div class="line mt-4"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-4 ">
+                    <img class="w-100" src="img/logo-map.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
     
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -200,6 +280,14 @@
             $('#p_main').css('display','block');
             $('#p_grafica').css('display','none');
             const video = $("#p_video_promo")[0].play();
+        }
+
+        function openGalery(){
+            $('#p_publico').slideDown(500);
+        }
+
+        function closeGalery(){
+            $('#p_publico').slideUp(500);
         }
     </script>
 </body>
