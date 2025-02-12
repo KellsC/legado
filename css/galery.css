@@ -25,6 +25,10 @@
     cursor: pointer;
 }
 
+.img-open:hover {
+    transform: scale(1.8);
+}
+
 /* Responsive */
 
 @media (max-width: 992px) {
