@@ -15,7 +15,7 @@
     <title>LEGADO</title>
 </head>
 <body>
-    <section id="p_main" class="container-fluid p-0 w-100" style="display: none;">
+    <section id="p_main" class="container-fluid p-0 w-100">
         <div class="video-background-main">
             <video class="bg-video" autoplay loop muted playsinline>
                 <source src="img/bg-video.mov" type="video/mp4">
@@ -39,10 +39,10 @@
                             <label for="cat" class="img-card img3"></label>
                         </div>
                 
-                        <a href="" class="follow-link chakra-petch-bold d-none d-lg-inline"><i class="fa-solid fa-camera"></i>&nbsp;GALERÍA DE FOTOS</a>
+                        <button type="button" class="btn follow-link chakra-petch-bold" onclick="showGalery()"><i class="fa-solid fa-camera"></i>&nbsp;GALERÍA DE FOTOS</button>
 
                         <div class="d-lg-none bg-black my-3">
-                            <a href="" class="follow-link chakra-petch-bold"><i class="fa-solid fa-camera"></i>&nbsp;GALERÍA DE FOTOS</a>
+                            <button type="button" class="btn follow-link chakra-petch-bold" onclick="showGalery()"><i class="fa-solid fa-camera"></i>&nbsp;GALERÍA DE FOTOS</button>
                         </div>
 
                         <div class="row box-img d-lg-none">
@@ -74,11 +74,11 @@
                     <div class="date-box staatliches-regular p-2">
                         <div class="row">
                             <div class="col-1">
-                                ENE
+                                FEB
                             </div>
                             <div class="col-10 text-start">
-                                24 de Enero -  7 de Febrero  (ARS 43,750)
-                                <p class="chakra-petch-regular">1ERA PREVENTA</p>
+                                9 de Febrero -  22 de Febrero  (ARS 43,750)
+                                <p class="chakra-petch-regular">2DA PREVENTA</p>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@
 
         <div class="spoty row justify-content-between align-items-center p-3 p-lg-5 mx-0">
             <div class="col-12 col-lg-4 order-2 order-lg-1">
-                <iframe class="spoty-list" style="border-radius:12px" src="https://open.spotify.com/embed/album/4pAFbjAwIsJQBjCNfjKLpg?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
+                <iframe class="spoty-list" style="border-radius:12px" src="https://open.spotify.com/embed/album/4pAFbjAwIsJQBjCNfjKLpg?utm_source=generator&theme=0" width="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
             </div>
             <div class="col-12 col-lg-4 text-center order-1 order-lg-2">
                 <div class="m-auto text-center" style="width: 300px;">
@@ -118,7 +118,7 @@
                 </p>
             </div>
             <div class="col-12 col-lg-4 order-3">
-                <iframe class="spoty-list" style="border-radius:12px" src="https://open.spotify.com/embed/artist/67gqUXxHedeUGDTxwBzdjS?utm_source=generator&theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
+                <iframe class="spoty-list" style="border-radius:12px" src="https://open.spotify.com/embed/artist/67gqUXxHedeUGDTxwBzdjS?utm_source=generator&theme=0" width="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        
             </div>
         </div>
 
@@ -170,77 +170,183 @@
         <button type="button" class="btn btn-blanco video-close chakra-petch-regular my-3" onclick="showFirstScreen()">Explora<br>Legado</button>
     </section>
 
-    <section id="p_galeria">
+    <section id="p_galeria" style="display: none;">
+        <div class="w-100 text-left">
+            <button type="button" class="btn follow-link chakra-petch-bold" onclick="volver()"><i class="fa-solid fa-caret-left"></i>&nbsp;VOLVER</button>
+        </div>
         <div class="container">
             <h1 class="display-1 text-center text-white staatliches-regular mt-5">GALERÍA</h1>
             <div class="line"></div>
             <div class="row justify-content-center">
                 <div class="col-3">
-                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase">Publico</h2>
-                    <img class="w-100 galery-img" src="img/07_foto_1.jpg" alt="">
+                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase min-title">Sophia</h2>
+                    <img class="w-100 galery-img" src="img/09_SOPHIA/08_LEGADOLATINO_-261.jpg" alt="" onclick="openSophia()">
                 </div>
 
                 <div class="col-3">
-                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase">Publico</h2>
-                    <img class="w-100 galery-img" src="img/07_foto_1.jpg" alt="" onclick="openGalery()">
+                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase min-title">Publico</h2>
+                    <img class="w-100 galery-img" src="img/01_PUBLICO/08_LEGADOLATINO_-59.jpg" alt="" onclick="openPublico()">
                 </div>
 
                 <div class="col-3">
-                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase">Publico</h2>
-                    <img class="w-100 galery-img" src="img/07_foto_1.jpg" alt="">
+                    <h2 class="galery-title chakra-petch-bold text-center text-uppercase min-title">N-Wise</h2>
+                    <img class="w-100 galery-img" src="img/07_foto_1.jpg" alt="" onclick="openWise()">
                 </div>
             </div>
 
-            <div id="p_publico" class="row justify-content-center" style="display: none;">
+            <div id="p_sophia" class="row justify-content-center" style="display: none;">
                 <div class="col-12">
-                    <h3 class="text-center chakra-petch-medium my-5 text-uppercase">publico</h3>
+                    <h3 class="text-center chakra-petch-medium mt-5 mb-3 my-lg-5 text-uppercase">Sophia Tredicce</h3>
                 </div>
-                <div class="row col-9 justify-content-center">
+                <div class="row col-12 col-lg-9 justify-content-center">
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-256.jpg" alt="">
                     </div>
 
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-257.jpg" alt="">
                     </div>
 
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-258.jpg" alt="">
                     </div>
 
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-259.jpg" alt="">
                     </div>
 
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-261.jpg" alt="">
                     </div>
 
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-264.jpg" alt="">
                     </div>
 
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-266.jpg" alt="">
                     </div>
 
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-269.jpg" alt="">
                     </div>
 
                     <div class="col-4 mt-3">
-                        <img class="w-100" src="img/07_foto_2.jpg" alt="">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-270.jpg" alt="">
                     </div>
                 </div>
 
                 <div class="col-12 text-center mt-4">
-                    <button class="btn btn-link follow-link chakra-petch-bold d-none d-lg-inline" onclick="closeGalery()"><i class="fa-solid fa-square-caret-up"></i>&nbsp;CERRAR</button>
+                    <button class="btn btn-link follow-link chakra-petch-bold d-none d-lg-inline" onclick="closeSophia()"><i class="fa-solid fa-square-caret-up"></i>&nbsp;CERRAR</button>
                 </div>
 
                 <div class="col-12">
                     <div class="line mt-4"></div>
                 </div>
             </div>
+
+            <div id="p_wise" class="row justify-content-center" style="display: none;">
+                <div class="col-12">
+                    <h3 class="text-center chakra-petch-medium mt-5 mb-3 my-lg-5 text-uppercase">N-WISE ALLAH & MDECLICK</h3>
+                </div>
+                <div class="row col-12 col-lg-9 justify-content-center">
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-256.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-257.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-258.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-259.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-261.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-264.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-266.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-269.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/09_SOPHIA/08_LEGADOLATINO_-270.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                    <button class="btn btn-link follow-link chakra-petch-bold d-none d-lg-inline" onclick="closeWise()"><i class="fa-solid fa-square-caret-up"></i>&nbsp;CERRAR</button>
+                </div>
+
+                <div class="col-12">
+                    <div class="line mt-4"></div>
+                </div>
+            </div>
+
+            <div id="p_publico" class="row justify-content-center" style="display: none;">
+                <div class="col-12">
+                    <h3 class="text-center chakra-petch-medium mt-5 mb-3 my-lg-5 text-uppercase">publico</h3>
+                </div>
+                <div class="row col-12 col-lg-9 justify-content-center">
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-59.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-60.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-68.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-62.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-63.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-64.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-65.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-66.jpg" alt="">
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <img class="w-100 img-open" src="img/01_PUBLICO/08_LEGADOLATINO_-67.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                    <button class="btn btn-link follow-link chakra-petch-bold d-none d-lg-inline" onclick="closePublico()"><i class="fa-solid fa-square-caret-up"></i>&nbsp;CERRAR</button>
+                </div>
+
+                <div class="col-12">
+                    <div class="line mt-4"></div>
+                </div>
+            </div>
+
             <div class="row justify-content-center">
                 <div class="col-4 ">
                     <img class="w-100" src="img/logo-map.png" alt="">
@@ -256,6 +362,8 @@
 
     <script>
 
+        let galery = false;
+
         $( document ).ready(function() {
 
             $(window).on('scroll', function (event) {
@@ -264,12 +372,12 @@
 
                 var bannerOffsetTop = $('#Banner').offset().top;
 
-                if ($(window).scrollTop() > bannerOffsetTop) {
+                if (($(window).scrollTop() > bannerOffsetTop) && !galery) {
 
                     $("#p_video_promo")[0].pause();
 
                 }
-                else if ($(window).scrollTop() <= bannerOffsetTop) {
+                else if (($(window).scrollTop() <= bannerOffsetTop) && !galery) {
                     $("#p_video_promo")[0].play();
                 }
 
@@ -282,13 +390,52 @@
             const video = $("#p_video_promo")[0].play();
         }
 
-        function openGalery(){
-            $('#p_publico').slideDown(500);
+        function showGalery(){
+            $('#p_main').css('display','none');
+            $('#p_grafica').css('display','none');
+            $('#p_galeria').css('display','block');      
+            const video = $("#p_video_promo")[0].pause();   
+            galery = true;   
         }
 
-        function closeGalery(){
+        function volver(){
+            $('#p_main').css('display','block');
+            $('#p_grafica').css('display','none');
+            $('#p_galeria').css('display','none');      
+            const video = $("#p_video_promo")[0].play();
+            galery = false;
+        }
+
+        function openPublico(){
+            $('#p_publico').slideDown(500);
+            closeSophia();
+            closeWise()
+        }
+
+        function openSophia(){
+            $('#p_sophia').slideDown(500);
+            closePublico();
+            closeWise()
+        }
+
+        function openWise(){
+            $('#p_wise').slideDown(500);
+            closePublico();
+            closeSophia();
+        }
+        
+        function closeSophia(){
+            $('#p_sophia').slideUp(500);
+        }
+
+        function closePublico(){
             $('#p_publico').slideUp(500);
         }
+
+        function closeWise(){
+            $('#p_wise').slideUp(500);
+        }
+
     </script>
 </body>
 </html>
