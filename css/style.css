@@ -106,7 +106,7 @@ body {
 }
 
 .logo-container {
-    background-image: url('../img/07_bg-logos.jpg');
+    background-image: url('../img/07_bg-logos.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -159,15 +159,15 @@ body {
 }
 
 .img1 {
-    background-image: url('../img/07_foto_5.jpg');
+    background-image: url('../img/01_PUBLICO/publico_30.png');
 }
 
 .img2 {
-    background-image: url('../img/07_foto_6.jpg');
+    background-image: url('../img/01_PUBLICO/publico_4.png');
 }
 
 .img3 {
-    background-image: url('../img/07_foto_7.jpg');
+    background-image: url('../img/01_PUBLICO/publico_26.png');
 }
 
 /* Video */
@@ -238,7 +238,7 @@ body {
 
 /* SPOTYFY */
 .spoty {
-    background-image: url('../img/08_bg-spoty.jpg');
+    background-image: url('../img/08_bg-spoty.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
